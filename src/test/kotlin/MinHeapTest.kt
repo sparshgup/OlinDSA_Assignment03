@@ -14,7 +14,7 @@ class MinHeapTest {
         heap.insert(data="tester", heapNumber=0.2)
         heap.insert(data="qq", heapNumber=0.5)
         heap.insert(data="anotherone", heapNumber=100.0)
-
+        assertFalse(heap.insert(data="qq", heapNumber=40.0))
         assertEquals(heap.getMin(), "tester")
         assertEquals(heap.getMin(), "qq")
         assertEquals(heap.getMin(), "claw")
@@ -24,5 +24,16 @@ class MinHeapTest {
         assertEquals(heap.getMin(), "anotherone")
         assertEquals(heap.getMin(), "reentry")
         assertEquals(heap.getMin(), null)
+    }
+
+    @Test
+    fun adjustPriority() {
+        val heap = MinHeap<String>()
+        heap.insert(data="test", heapNumber=3.2)
+        heap.insert(data="booh", heapNumber=5.3)
+        heap.insert(data="claw", heapNumber=1.0)
+        heap.insert(data="tester", heapNumber=0.2)
+        heap.adjustHeapNumber("booh", 0.0)
+        assertEquals(heap.getMin(), "booh")
     }
 }
