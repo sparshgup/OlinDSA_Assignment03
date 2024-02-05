@@ -36,4 +36,14 @@ class MinHeapTest {
         heap.adjustHeapNumber("booh", 0.0)
         assertEquals(heap.getMin(), "booh")
     }
+
+    @Test
+    fun isEmpty() {
+        val heap = MinHeap<String>()
+        assertTrue(heap.isEmpty())
+        heap.insert("test", 30.0)
+        assertFalse(heap.isEmpty())
+        heap.getMin()
+        assertTrue(heap.isEmpty())
+    }
 }
