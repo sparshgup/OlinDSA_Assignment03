@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8389e26-ebab-45ba-9177-2a45d5e72f57" name="Changes" comment="Heap reference implementation is ready">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MinHeap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MinHeap.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/MinHeapTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/MinHeapTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2bvWDjeGxoBkKxNuu0HnOD9wGsp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,6 +45,8 @@
     "Gradle.MinHeapTest.adjustPriority.executor": "Run",
     "Gradle.MinHeapTest.executor": "Run",
     "Gradle.MinHeapTest.insert.executor": "Run",
+    "Gradle.MinHeapTest.isEmpty.executor": "Run",
+    "Gradle.MinHeapTest.testInfiniteValues.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -66,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MinHeapTest.isEmpty">
+  <component name="RunManager" selected="Gradle.MinHeapTest">
     <configuration name="MinHeapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,10 +167,35 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MinHeapTest.testInfiniteValues" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MinHeapTest.testInfiniteValues&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MinHeapTest.isEmpty" />
         <item itemvalue="Gradle.MinHeapTest" />
+        <item itemvalue="Gradle.MinHeapTest.testInfiniteValues" />
+        <item itemvalue="Gradle.MinHeapTest.isEmpty" />
         <item itemvalue="Gradle.MinHeapTest.adjustPriority" />
         <item itemvalue="Gradle.MinHeapTest.insert" />
       </list>
@@ -187,7 +216,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707095916322</updated>
-      <workItem from="1707095917467" duration="7199000" />
+      <workItem from="1707095917467" duration="31417000" />
+      <workItem from="1707255235067" duration="598000" />
+      <workItem from="1707340778658" duration="598000" />
+      <workItem from="1707409487935" duration="674000" />
+      <workItem from="1707502270539" duration="1010000" />
     </task>
     <task id="LOCAL-00001" summary="Added heap implementation.">
       <option name="closed" value="true" />
@@ -205,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707109428872</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Heap reference implementation is ready">
+      <option name="closed" value="true" />
+      <created>1707109508167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707109508167</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
