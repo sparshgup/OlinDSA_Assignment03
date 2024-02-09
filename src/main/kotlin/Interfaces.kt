@@ -11,12 +11,12 @@ interface Graph<VertexType> {
     fun getVertices(): Set<VertexType>
 
     /**
-     * Add an
+     * Add an edge to the graph from one vertex to another with weighted cost
      */
     fun addEdge(from: VertexType, to: VertexType, cost: Double)
 
     /**
-     *
+     * @return the edges in the graph
      */
     fun getEdges(from: VertexType): Map<VertexType, Double>
 
@@ -53,8 +53,7 @@ interface MinPriorityQueue<T> {
      * Adjust the priority of the given element
      * @param elem whose priority should change
      * @param newPriority the priority to use for the element
-     *   the lower the priority the earlier the element int
-     *   the order.
+     *   the lower the priority the earlier the element in the order.
      */
     fun adjustPriority(elem: T, newPriority: Double)
 }
