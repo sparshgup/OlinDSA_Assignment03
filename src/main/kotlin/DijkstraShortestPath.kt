@@ -10,39 +10,38 @@ fun <VertexType> DijkstraShortestPath(
     val distances = mutableMapOf<VertexType, Double>()
 
     // Map to reconstruct the shortest path
-    val parents = mutableMapOf<VertexType, VertexType?>()
+    val prev = mutableMapOf<VertexType, VertexType?>()
 
     // Initialize distances and parent nodes
     graph.getVertices().forEach {
         distances[it] = Double.POSITIVE_INFINITY
-        parents[it] = null
+        prev[it] = null
     }
 
     distances[start] = 0.0
     queue.addWithPriority(start, 0.0)
 
     while (!queue.isEmpty()) {
-        val current = queue.next() ?: break
+        val u = queue.next() ?: break
 
-        // If we reach target vertex, reconstruct the path and return it
-        if (current == target) {
+        // Reconstruct path if we reach target vertex
+        if (u == target) {
             val path = mutableListOf<VertexType>()
-            var node: VertexType? = current
+            var node: VertexType? = u
             while (node != null) {
                 path.add(node)
-                node = parents[node]
+                node = prev[node]
             }
             return path.reversed()
         }
 
-        // Update distances to neighbors
-        val neighbors = graph.getEdges(current)
-        for ((neighbor, weight) in neighbors) {
-            val tentativeDistance = distances[current]!! + weight
-            if (tentativeDistance < distances[neighbor]!!) {
-                distances[neighbor] = tentativeDistance
-                parents[neighbor] = current
-                queue.addWithPriority(neighbor, tentativeDistance)
+        val neighbors = graph.getEdges(u)
+        for ((v, cost) in neighbors) {
+            val alt = distances[u]!! + cost
+            if (alt < distances[v]!!) {
+                distances[v] = alt
+                prev[v] = u
+                queue.addWithPriority(v, alt)
             }
         }
     }
